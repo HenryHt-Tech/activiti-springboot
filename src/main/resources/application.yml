@@ -1,0 +1,22 @@
+server:
+    port: 9999
+
+spring:
+    application:
+        name: activiti-springboot
+    datasource:
+        url: jdbc:mysql://172.20.0.140:3306/activiti?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
+        username: it
+        password: Its123
+        driver-class-name: com.mysql.jdbc.Driver
+    activiti:
+        database-schema-update: true
+        # 自动部署验证设置:true-开启（默认）、false-关闭
+        check-process-definitions: false
+    thymeleaf:
+        mode: LEGACYHTML5
+        cache: false
+logging:
+    level:
+        org.activiti.engine.impl.persistence.entity: debug
+
